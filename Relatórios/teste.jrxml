@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="teste" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a9b522eb-a66a-45cd-bcfb-3df24696fcfd">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="consulta" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tete" class="java.lang.String">
+		<defaultValueExpression><![CDATA[null]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[$P!{consulta}]]>
+	</queryString>
+	<field name="identificacao" class="java.lang.Integer"/>
+	<field name="identificacao2" class="java.lang.String"/>
+	<field name="cod_status" class="java.lang.Integer"/>
+	<field name="status" class="java.lang.String"/>
+	<field name="cod_tipoAnimal" class="java.lang.Integer"/>
+	<field name="tipoAnimal" class="java.lang.String"/>
+	<field name="cod_raca" class="java.lang.Integer"/>
+	<field name="raca" class="java.lang.String"/>
+	<field name="idade" class="java.lang.Integer"/>
+	<field name="cod_pasto" class="java.lang.Integer"/>
+	<field name="pasto" class="java.lang.String"/>
+	<field name="loteCompra" class="java.lang.Integer"/>
+	<field name="loteVenda" class="java.lang.Integer"/>
+	<field name="sexo" class="java.lang.String"/>
+	<field name="obs" class="java.lang.String"/>
+	<field name="dtCadastro" class="java.lang.String"/>
+	<field name="dtUltimaAteracao" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="-20" y="0" width="595" height="64" uuid="78df774a-b998-4f79-9229-11a9b7a1d5fe"/>
+				<imageExpression><![CDATA["wood.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="5" width="263" height="33" uuid="58f4fbd2-afb9-4531-874c-51bb7a5ed81e"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[TESTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="63" y="39" width="200" height="22" forecolor="#FFFFFF" uuid="a34f286a-347f-4fa4-bcf6-20a0200188c8"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Wood SubTitle]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="9bff5cfa-e440-4851-ab8d-c3012790765d"/>
+				<text><![CDATA[identificacao]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="20" uuid="d33c9c4d-db1b-43d0-9fcf-b75af4ac1171"/>
+				<text><![CDATA[identificacao2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="100" height="20" uuid="1c8631a9-092d-4ae2-b691-25ac28e3abec"/>
+				<text><![CDATA[status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="0" width="100" height="20" uuid="4298c9b1-97f9-4f67-9a46-42262e2bfdb5"/>
+				<text><![CDATA[tipoAnimal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="100" height="20" uuid="522f0300-1ab9-4b92-81a3-ac0d070d4a3c"/>
+				<text><![CDATA[raca]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="0" width="100" height="20" uuid="f46f4736-7a75-4517-96d0-76130a6f1da5"/>
+				<text><![CDATA[sexo]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="95" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="765cf910-a075-4eda-992d-2faf51a708e2"/>
+				<textFieldExpression><![CDATA[$F{identificacao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20" uuid="73dd5cf0-3a9c-4753-8d37-0951b8d06ac0"/>
+				<textFieldExpression><![CDATA[$F{identificacao2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="100" height="20" uuid="d097af62-9256-45a3-b053-f1c626f0f951"/>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="100" height="20" uuid="af0397ef-56cd-4577-8349-db7b338ea92f"/>
+				<textFieldExpression><![CDATA[$F{tipoAnimal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="100" height="20" uuid="89878ff4-9a1c-4add-a7ee-f18bfb422d51"/>
+				<textFieldExpression><![CDATA[$F{raca}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="500" y="0" width="100" height="20" uuid="fae01f0d-90d7-4c2c-a5ed-e44058a2db43"/>
+				<textFieldExpression><![CDATA[$F{sexo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="49" y="59" width="100" height="20" uuid="3f5192d5-1390-4c66-8738-27889e830518"/>
+				<textFieldExpression><![CDATA[$P{tete}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="146" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="a1b81b82-599a-44e3-a7a9-0f92ee1addff"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="0c1e5ce8-01dd-44af-8656-8f0be9ce59c8"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="d290d7f6-0717-4a72-bd9f-2de960afe6f0"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
